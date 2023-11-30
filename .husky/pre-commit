@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+cd workspace/dylan/CanChu && echo "Hello World"
+# exec < /dev/tty && git cz --hook || true

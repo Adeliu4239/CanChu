@@ -1,0 +1,67 @@
+{
+  "name": "canchu",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "commit": "cz",
+    "prepare": "cd ../../../ && husky install workspace/dylan/CanChu/.husky"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "ai": "^2.1.32",
+    "ast-utils": "^1.0.0",
+    "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.3.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "formik": "^2.4.2",
+    "github-markdown-css": "^5.2.0",
+    "js-cookie": "^3.0.5",
+    "jsx-ast-utils": "^3.3.4",
+    "md-editor-rt": "^4.2.2",
+    "next": "^13.4.9",
+    "openai": "^3.3.0",
+    "openai-edge": "^1.2.2",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-loading-skeleton": "^3.3.1",
+    "react-markdown": "^8.0.7",
+    "sass": "^1.63.6",
+    "sweetalert2": "^11.7.20",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.6",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/cz-commitlint": "^17.5.0",
+    "@next/eslint-plugin-next": "^13.4.9",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "^13.4.9",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "prettier": "^3.0.0",
+    "prettier-eslint": "^15.0.1"
+  }
+}

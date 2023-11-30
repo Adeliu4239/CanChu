@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+.colorBlue {
+  background-color: #5458f7;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.colorGray {
+  color: #909090 !important;
+}
+.noeffect {
+  cursor: default;
+}
+.image {
+  position: absolute;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  min-width: 320px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1000;
+  margin: 0 auto;
+  .navBox {
+    height: 73%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+
+    .brandLogo {
+      font-family: Pattaya;
+      font-size: 37px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #7763fb;
+    }
+    .searchBar {
+      width: 330px;
+      margin-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .searchBox {
+        border-radius: 10px;
+        border: 1px;
+        background: #f0f2f5;
+        padding-left: 5.45%;
+        width: 100%;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        .searchText {
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 0em;
+          text-align: left;
+          order: 1;
+          background-color: transparent;
+          border: none;
+          height: 1.5rem;
+          margin: 0.5rem;
+          &:focus {
+            outline: none;
+          }
+        }
+        .searchPic {
+          align-self: center;
+        }
+      }
+      .searchResultBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: inherit;
+        position: absolute;
+        top: 88px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: var(--white, #fff);
+        max-height: 500px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #fbfbfb;
+          border: 1px solid #0000001a;
+          border-radius: 10px;
+          &:hover {
+            border: 1px solid #000;
+          }
+        }
+        .searchResultItem {
+          width: 100%;
+          max-height: 70px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .searchResultItemLink {
+            width: 100%;
+            max-height: 70px;
+            display: flex;
+            padding: 0 2.25rem;
+            margin: 0.5rem 0;
+            flex-direction: row;
+            align-items: center;
+            .searchResultPic {
+              width: 39px;
+              height: 39px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            .searchResultName {
+              color: #566470;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 500;
+              margin: 0 0 0 1rem;
+              max-width: 200px;
+              white-space: nowrap;
+              overflow: clip;
+              text-overflow: ellipsis;
+            }
+          }
+          .line {
+            width: 100%;
+            height: 1px;
+            background-color: #d9d9d9;
+          }
+        }
+      }
+    }
+    .navFunction {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: flex-end;
+      .searchBtn {
+        display: none;
+        align-items: center;
+        height: min-content;
+        position: relative;
+      }
+      .notifIcon {
+        display: flex;
+        align-items: center;
+        height: min-content;
+        position: relative;
+        &:hover .notifMenu {
+          // cursor: pointer;
+          visibility: visible;
+          opacity: 1;
+          transition-delay: 0s;
+        }
+        .notifHint {
+          position: absolute;
+          top: -0.5rem;
+          right: -0.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .notifMenu {
+          visibility: hidden;
+          opacity: 0;
+          transition:
+            0s linear 0.3s,
+            opacity 0.3s;
+          position: absolute;
+          width: min-content;
+          max-height: 468px;
+          top: 68px;
+          right: 0;
+          border-radius: 20px;
+          border: 1px solid #0000001a;
+          box-shadow: 0px 9px 14px 0px #0000001a;
+          overflow-y: auto;
+          &::-webkit-scrollbar {
+            width: 10px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: #fbfbfb;
+            border: 1px solid #0000001a;
+            border-radius: 10px;
+            &:hover {
+              border: 1px solid #000;
+            }
+          }
+          &::-webkit-scrollbar-track {
+            background-color: #deddddbd;
+            border-radius: 10px;
+          }
+          .notifMenuBox {
+            width: 330px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 20px;
+            background: hsla(0, 0%, 97%, 1);
+            border: 1px solid #0000001a;
+            box-shadow: 0px 9px 14px 0px #0000001a;
+            .notifiBox {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              font-size: 22px;
+              font-weight: 500;
+              text-align: left;
+              color: #000;
+              padding: 0.5rem 0;
+              .notifIconHov {
+                display: flex;
+                align-items: center;
+                height: min-content;
+                margin: 8px 1rem 8px 24px;
+              }
+              .notifiBoxTitle {
+                color: #fff;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+              }
+              .notifiReaded {
+                color: #fff;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                text-decoration: underline;
+                flex-grow: 1;
+              }
+              .notifiBoxBtn {
+                width: 100%;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-right: 1rem;
+                font-size: 18px;
+                color: #000;
+                text-align: center;
+                font-style: normal;
+                font-weight: 400;
+                text-decoration-line: underline;
+              }
+            }
+            .notifiContent {
+              width: 280px;
+              display: flex;
+              align-items: center;
+              margin: 0 24px;
+              padding: 1rem 0 0.5rem 0;
+              justify-content: space-between;
+              border-bottom: 1px solid #d1cace;
+              .notifiContentBox {
+                width: 260px;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                text-align: start;
+                .notif {
+                  font-family: Outfit;
+                  font-style: normal;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 1.5rem;
+                }
+                .notifTime {
+                  color: #5458f7;
+                  font-family: Outfit;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .userPic {
+        margin-left: 1rem;
+        &:hover .navMenu {
+          /* 定義 hover 時的樣式 */
+          cursor: pointer;
+          visibility: visible;
+          opacity: 1;
+          transition-delay: 0s;
+        }
+        .userPicCon {
+          display: flex;
+          width: 36px;
+          height: 36px;
+          position: relative;
+        }
+        .navMenu {
+          visibility: hidden;
+          opacity: 0;
+          transition:
+            0s linear 0.3s,
+            opacity 0.3s;
+          position: absolute;
+          width: 261px;
+          min-height: 192px;
+          top: 113px;
+          right: 10%;
+          border-radius: 20px;
+          background: hsla(0, 0%, 97%, 1);
+          border: 1px solid #0000001a;
+          box-shadow: 0px 9px 14px 0px #0000001a;
+          display: flex;
+          flex-direction: column;
+          align-items: self-start;
+          justify-content: space-between;
+          .navInfo {
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: 500;
+            color: #000;
+            min-height: 4rem;
+            .userPicConHov {
+              display: flex;
+              width: 38px;
+              height: 38px;
+              position: relative;
+              margin-left: 18px;
+              margin-right: 18px;
+            }
+            .navUserName {
+              font-size: 20px;
+              font-weight: 700;
+              letter-spacing: 0em;
+              color: #ffffff;
+              max-width: 70%;
+              margin: 0.5rem 0;
+            }
+            .navLink {
+              width: 90%;
+              min-height: inherit;
+              color: #000;
+              border-bottom: 1px solid #d1cace;
+              display: flex;
+              align-items: center;
+              padding: 0 0.25rem;
+            }
+          }
+          .navInfoHov {
+            padding-left: 1.5rem;
+            &:hover {
+              background-color: #d1cace;
+            }
+          }
+        }
+      }
+    }
+  }
+  .line {
+    color: 1px solid #bfbfbf;
+    margin: 0px;
+  }
+}
+@media screen and (min-width: 496px) {
+  .nav {
+    .navBox {
+      .searchBar {
+        display: flex !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 496px) {
+  .nav {
+    .navBox {
+      .searchBar {
+        display: none;
+        width: 100%;
+        // min-width: 320px;
+        height: 100vh;
+        margin: 0;
+        z-index: 10;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        .searchBox {
+          width: 80%;
+        }
+        .searchResultBox {
+          width: 80%;
+          top: 64px;
+          .searchResultItem {
+            .searchResultItemLink {
+              width: 100%;
+              .searchResultName {
+                max-width: 70%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav {
+    .navBox {
+      .navFunction {
+        .searchBtn {
+          display: flex !important;
+        }
+        .notifIcon {
+          margin: 0 0 0 0.5rem;
+          .notifMenu {
+            position: fixed;
+            top: 113px;
+            right: 10px;
+            width: 290px;
+            .notifMenuBox {
+              width: 288px;
+              .notifiBox {
+                .notifiBoxTitle {
+                  font-size: 20px;
+                }
+                .notifiReaded {
+                  font-size: 16px;
+                }
+                .notifiBoxBtn {
+                  font-size: 16px;
+                }
+              }
+              .notifiContent {
+                width: 260px;
+                margin: 0;
+                .notifiContentBox {
+                  .notif {
+                    font-size: 14px;
+                  }
+                  .notifTime {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .userPic {
+          margin: 0 0 0 0.5rem;
+        }
+      }
+    }
+  }
+}

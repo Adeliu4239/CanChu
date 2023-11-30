@@ -1,0 +1,266 @@
+.image {
+  position: absolute;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blue {
+  background: #5458f7;
+}
+.gray {
+  background: #d3d3d3;
+}
+.red {
+  background: #f82525;
+}
+.flexBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sideHide{
+  display: block;
+}
+.sideBar {
+  max-width: 100%;
+  position: sticky;
+  top: 124px;
+  max-height: 80vh;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #fbfbfb;
+    border: 1px solid #0000001a;
+    border-radius: 10px;
+    &:hover {
+      border: 1px solid #000;
+    }
+  }
+  .sideBox {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #0000001a;
+    background: linear-gradient(0deg, #ffffff, #ffffff),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    .sideContent {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      margin: 21px 21px 18px 25px;
+      .sideItem {
+        display: flex;
+        align-items: center;
+        margin: 20px 0 0;
+        width: 100%;
+        .sideIcon {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          position: relative;
+          display: flex;
+        }
+        .sideText {
+          min-width: 4.5rem;
+          flex-grow: 1;
+          margin-left: 15px;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 0em;
+          color: #000000;
+        }
+        .sideTextInvite {
+          min-width: 4.5rem;
+          flex-grow: 1;
+          margin-left: 15px;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 0em;
+          color: #000000;
+          white-space: nowrap;
+          overflow: clip;
+          text-overflow: ellipsis;
+        }
+        .sideTextMore {
+          margin-left: 15px;
+          color: #000;
+          font-size: 18px;
+          font-weight: 500;
+          text-decoration-line: underline;
+        }
+        .sideSmallButton {
+          min-width: 4rem;
+          margin-left: auto;
+          height: 40px;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: #fff;
+          font-size: 16px;
+          font-family: Outfit;
+          font-weight: 600;
+          line-height: 24px;
+        }
+        .btnHidden {
+          display: none;
+          margin-left: auto;
+          width: 20px;
+        }
+      }
+      .line {
+        height: 1px;
+        background-color: #d9d9d9;
+        margin: 10px 0 0;
+        width: 100%;
+      }
+      .sideButton {
+        width: 335px;
+        height: 40px;
+        margin: 0 auto;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .sideItemUser {
+        margin-bottom: 16px;
+        text-align: left;
+        width: 100%;
+        .sideTitle {
+          color: #525252;
+          font-weight: 700;
+          font-size: 18px;
+        }
+        .sideTextArea {
+          margin-top: 10px;
+          padding-left: 3px;
+          border-radius: 10px;
+          border: 1px solid #bfbfbf;
+          background: #f0f2f5;
+          width: 100%;
+          min-height: 84px;
+          color: #5c5c5c;
+          font-weight: 600;
+          font-size: 16px;
+        }
+        .sideText {
+          padding-left: 3px;
+          padding-top: 8px;
+          color: #5c5c5c;
+          font-weight: 600;
+          font-size: 16px;
+          white-space: pre-line;
+          line-height: 1.5rem;
+          .interestBar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .interestBox {
+              padding: 0 16px 0 16px;
+              border-radius: 50px;
+              border: 1px solid #000;
+              color: #000;
+              text-align: center;
+              font-size: 14px;
+              font-weight: 500;
+              margin: 0 8px 8px 0;
+            }
+          }
+        }
+      }
+      .sideButtonArea {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .sideButtonAreaText {
+          width: 30%;
+          height: 40px;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 700;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  .sideBoxFooter {
+    display: flex;
+    width: 274px;
+    flex-direction: column;
+    color: #525252;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 1.5rem auto;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .sideBar {
+    width: 100%;
+    .sideBox {
+      .sideContent {
+        .sideItem {
+          .sideSmallButton {
+            display: none;
+          }
+          .btnHidden {
+            display: flex;
+          }
+        }
+        .sideButton {
+          width: 22.5vw;
+        }
+      }
+    }
+  }
+  .sideBoxFooter {
+    max-width: 80%;
+    overflow-x: clip;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .sideHide {
+    display: none;
+  }
+  .sideBar {
+    .sideBox {
+      .sideContent {
+        .sideButton {
+          width: 50vw;
+        }
+      }
+    }
+  }
+  
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 320px) {
+}

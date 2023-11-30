@@ -1,0 +1,108 @@
+.image {
+  position: absolute;
+  min-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.writeBox {
+  width: 100%;
+  min-height: 197px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--white, #fff);
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .writeZone {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    .writerPic {
+      width: 74px;
+      height: 74px;
+      max-width: 74px;
+      min-width: 74px;
+      position: relative;
+      border-radius: 50%;
+    }
+    .writeField {
+      width: auto;
+      flex-grow: 1;
+      margin-left: 1.5rem;
+    }
+    .writeText {
+      min-height: 99px;
+      border-radius: 10px;
+      border: 1px solid #d9d9d9;
+      background: #f0f2f5;
+      padding: 15px 15px 15px 15px;
+      width: 100%;
+      color: #767676;
+      background: #f0f2f5;
+      border: none;
+      font-family: Outfit;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  .functionZone {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    .writeButton {
+      width: 140.812px;
+      min-width: 4.5rem;
+      height: 40px;
+      border-radius: 6px;
+      background: #5458f7;
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .buttonText {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .apiSelect {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      .apiLabel {
+        font-size: 16px;
+        font-weight: 400;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .writeBox {
+    .functionZone {
+      flex-direction: column;
+      align-items: center;
+      .writeButton {
+        width: 100%;
+        height: 40px;
+        align-self: center;
+        margin: 1rem 0;
+      }
+      .apiSelect {
+        align-self: center;
+      }
+    }
+  }
+}

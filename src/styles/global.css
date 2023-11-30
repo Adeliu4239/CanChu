@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Outfit;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0px;
+  background-color: #f9f9f9;
+  min-width: 320px;
+}
+
+main {
+  width: 81.25%;
+  display: flex;
+  margin: 24px auto 0;
+  justify-content: space-between;
+}
+article {
+  width: 65.8%;
+}
+
+aside {
+  width: 370px;
+}
+
+section {
+  width: 100%;
+  margin: 0px auto 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+input::placeholder {
+  color: #bfbfbf;
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem; /* 150% */
+}
+
+.textHint {
+  margin: 25px auto;
+  font-family: Outfit;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+button {
+  /* background-color: hsl(0, 0%, 97%); */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+button:disabled {
+  cursor: default;
+}
+textarea {
+  line-height: normal;
+  resize: none;
+}
+.sideBarRwd {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    width: 81.25vw;
+    max-width: 1440px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  aside {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  aside {
+    width: 100%;
+  }
+  .sideBarRwd{
+    display: block;
+  }
+  main {
+    width: 81.25%;
+    display: block;
+    margin: 24px auto 0;
+  }
+  article {
+    margin-top: 24px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 320px) {
+}
